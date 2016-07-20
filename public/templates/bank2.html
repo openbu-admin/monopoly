@@ -1,0 +1,29 @@
+<ion-view title="Bank" id="page7" class=" ">
+    <ion-content padding="true" class=" manual-remove-top-padding has-header" scroll="true">
+        <div class="spacer" style="width: 300px; height: 25px;"></div>
+        <form id="bank2-form6" class="list ">
+
+            <label class="item item-input " id="bank2-input7">
+                <input type="text"  ng-model="data.sum" placeholder="Сумма перевода">
+            </label>
+        </form>
+        <div style="margin-right:-20px;">
+            <button id="bank2-button5"  ng-click="increaseToTransfer(data.sum, idToTransfer)" style="left:-10px;" class=" button button-balanced  button-full button-outline ">Перевести {{nameToTransfer}} {{data.sum}} </button>
+        </div>
+        <div style="margin-right:-20px;">
+            <button id="bank2-button6" ng-click="decreaseToTransfer(data.sum, idToTransfer)" style="left:-10px;" class=" button button-assertive  button-full button-outline ">Отвести {{nameToTransfer}} {{data.sum}}</button>
+        </div>
+        <ion-list  id="bank2-list16" class=" ">
+            <ion-item  ng-hide="data.err" id="bankNewPlayers-list-item38" style="color:#ff3b30;text-align:center;" > Выбыре пользователя!
+            </ion-item>
+            <div style="margin-right:-20px;">
+                <button id="bank2-button6" ng-click="loadPlayer()" style="left:-10px;" class=" button button-clear  button-full button-outline ">Обновить</button>
+            </div>
+            <ion-item  ng-repeat="player_data in data.player" ng-click="trans(player_data)" id="bankNewPlayers-list-item38">{{player_data.name}}<span class="item-note">{{player_data.deposit}}</span>
+            </ion-item>
+        </ion-list>
+        <div style="margin-right:-20px;">
+            <a ui-sref="tabsController.bankNewPlayers" id="bank2-button7" style="left:-10px;" class=" button button-light  button-full ">Добавить/удалить игроков</a>
+        </div>
+    </ion-content>
+</ion-view>

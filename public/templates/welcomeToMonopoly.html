@@ -1,0 +1,22 @@
+<ion-view title="Welcome to Monopoly!" id="page2" class=" ">
+
+    <ion-content padding="true" class=" manual-remove-top-padding has-header" scroll="false">
+        <div class="spacer" style="width: 300px; height: 119px;"></div>
+        <p id="welcomeToMonopoly-markdown2" style="color:#000000;font-size:150px;text-align:center;" class=" ">M</p>
+        <form id="welcomeToMonopoly-form1" class="list ">
+            <label class="item item-input " ng-hide="!data.auth" id="welcomeToMonopoly-input1" name="password">
+                <input ng-model="data.login"   type="text" placeholder="Ваш логин миледи!">
+            </label>
+        </form>
+        <a ng-click="click(data.login)" ng-hide="!data.auth" id="welcomeToMonopoly-button1" class=" button button-balanced  button-block button-outline ">Играть!</a>
+        <a ng-click="click(data.login)" ng-hide="data.auth" id="welcomeToMonopoly-button1" class=" button button-balanced  button-block button-outline ">Перейти в профиль {{data.login}}</a>
+
+        <p id="welcomeToMonopoly-markdown1" style="color:#ACACAC;text-align:center;" ng-hide="!data.auth" ng-hide="!data.error" class=" ">Игра уже начилась. Вы можете узнать свой логин обратившийсь к Банкиру.</p>
+        <p id="welcomeToMonopoly-markdown1" ng-hide="data.error" style="color:#ff3b30;text-align:center;" class=" ">Не правильный логин! Повторите ещё раз.</p>
+        <p id="welcomeToMonopoly-markdown1" ng-hide="data.auth" style="color:#ACACAC;text-align:center;" class=" ">Вы уже аторизованы как {{data.login}}</p>
+
+        <div class="spacer" style="width: 300px; height: 163px;"></div>
+    </ion-content>
+
+</ion-view>
+<!---- ui-sref="tabsController.welcomeMari" -----!>

@@ -1,0 +1,12 @@
+<ion-view title="Rating" id="page4" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="rating-list8" class=" ">
+            <ion-item ng-repeat="player in data.player" class="item-thumbnail-left  " id="rating-list-item13">
+                <h2>{{player.name}}</h2>
+                <p>{{player.deposit}}K$</p>
+            </ion-item>
+        </ion-list>
+        <button id="bank2-button6" ng-click="loadPlayer()" style="left:-10px;" class=" button button-clear  button-full button-outline ">Обновить</button>
+
+    </ion-content>
+</ion-view>

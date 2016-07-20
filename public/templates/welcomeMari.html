@@ -1,0 +1,23 @@
+<ion-view title="Welcome {{player.name}} 😊!" id="page6" class=" ">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <ion-list id="welcomeMari-list9" class=" ">
+            <ion-item ng-click="update()" class="item-avatar  " id="welcomeMari-list-item18">
+                <img src="img/1ZPLfcIITC6CeEJv2z8Q_256.png">
+                <h2>{{player.name}}</h2>
+                <p>{{player.deposit}}K$</p>
+            </ion-item>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 24px;"></div>
+        <form id="welcomeMari-form5" class="list ">
+            <label class="item item-input "  id="welcomeMari-input6">
+                <input type="text" ng-model="sum" placeholder="Сумма перевода">
+            </label>
+        </form>
+        <button id="welcomeMari-button4" ng-click="increaseToTransfer(sum, player._id ,idToTransfer)" class=" button button-balanced  button-block button-outline ">Перевести {{nameToTransfer}} </button>
+        <ion-list id="welcomeMari-list14">
+            <ion-item  ng-hide="data.err" id="bankNewPlayers-list-item38" style="color:#ff3b30;text-align:center;" > Выбыре пользователя!
+            </ion-item>
+            <ion-item ng-if="player.name != player_data.name" ng-repeat="player_data in data.player" ng-click="trans(player_data)" id="welcomeMari-list-item29" >{{player_data.name}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

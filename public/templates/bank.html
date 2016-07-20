@@ -1,0 +1,19 @@
+<ion-view title="Bank" id="page3" class=" ">
+    <ion-content padding="true" class=" manual-remove-top-padding has-header" scroll="false">
+        <div class="spacer" style="width: 300px; height: 126px;"></div>
+        <p id="bank-markdown3" style="color:#000000;font-size:150px;text-align:center;" class=" ">B</p>
+        <form ng-hide="!data.auth" id="bank-form3" class="list ">
+            <label class="item item-input " id="bank-input4" name="login_bank">
+                <input ng-model="data.login" type="text" placeholder="Логин">
+            </label>
+            <label class="item item-input " id="bank-input5" name="password_bank">
+                <input ng-model="data.password" type="password" placeholder="Пароль">
+            </label>
+        </form>
+        <a ng-hide="!data.auth" ng-click="login(data.login,data.password )" id="bank-button3" class=" button button-balanced  button-block button-outline ">Вход</a>
+        <a ng-hide="data.auth" ng-click="login(data.login,data.password )" id="bank-button3" class=" button button-balanced  button-block  ">Войти в банк как {{data.login}}</a>
+        <p id="welcomeToMonopoly-markdown1" ng-hide="data.error" style="color:#ff3b30;text-align:center;" class=" ">Не правильный логин! Повторите ещё раз.</p>
+        <p id="welcomeToMonopoly-markdown1" ng-hide="data.auth" style="color:#ACACAC;text-align:center;" class=" ">Вы уже аторизованы как {{data.login}}</p>
+    </ion-content>
+</ion-view>
+

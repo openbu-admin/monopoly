@@ -1,0 +1,21 @@
+<ion-view title="Bank new Players" id="page8" class=" " scroll="true">
+    <ion-content padding="true" scroll="true" class="has-header" >
+        <form id="bankNewPlayers-form7" class="list ">
+            <label class="item item-input " id="bankNewPlayers-input8" name="name">
+                <input ng-model="player.name" type="text" placeholder="Имя">
+            </label>
+        </form>
+        <button ng-click="addNewPlayers()" id="bankNewPlayers-button8" class=" button button-balanced  button-block button-outline ">Добавить {{player.name}}</button>
+        <ion-list id="bankNewPlayers-list17" class=" ">
+            <ion-item ng-repeat="player_data in data.player" id="bankNewPlayers-list-item38">
+                <div class="item item-button-right">
+                    {{player_data.name}}
+                    <button ng-click="deletePlayer(player_data._id)" class="button button-outline button-assertive">
+                        Удалить
+                    </button>
+                </div>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
